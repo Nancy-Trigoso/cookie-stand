@@ -19,7 +19,7 @@ Location.prototype.estimate = function(){
 };
 
 const seattle = new Location("Seattle", 23, 65, 6.3, []);
-const tokyo = new Location("Tokio", 3, 24, 1.2, []);
+const tokyo = new Location("Tokyo", 3, 24, 1.2, []);
 const dubai = new Location("Dubai", 11, 38, 3.7, []);
 const paris = new Location("Paris", 20, 37, 2.3, []);
 const lima = new Location("Lima", 2, 16, 4.6, []);
