@@ -34,7 +34,7 @@ Esta es una página web de desmotración conceptual que calcula el número de ga
 
 + Punción de la fecha: 26-06-2024
 
-<img alt="puntaje2" src="/img/Lab07.PNG.png">
+<img alt="puntaje2" src="/img/Lab07.PNG">
 
 ### Licencia 
 
