@@ -88,10 +88,30 @@ footer{
     padding: 40px;
     font-family: Times, sans-serif;
 }
-main li{
-    margin-left: 60px; 
-    padding: 5px;
-    color:#666666;
-    font-family: Arial, verdana, helvetica, sans-serif;
+
+main.tabla {
+    display: flex 1;
+    padding: 50px;
+    padding-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size:small;
+    border: 2px solid rgb(148, 146, 146);
+}
+
+th, 
+td {
+    border: 1.5px solid rgb(148, 146, 146);
+    padding: 15px;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+
+th {
+    font-weight: bold;
+    font-family: arial, sans-serif;
 }
 
