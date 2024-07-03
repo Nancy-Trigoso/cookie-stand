@@ -106,12 +106,12 @@ th,
 td {
     border: 1.5px solid rgb(148, 146, 146);
     padding: 15px;
-    text-align: center;
+    text-align: left;
     font-family: arial, sans-serif;
+    font-weight: bold;
 }
 
-th {
-    font-weight: bold;
-    font-family: arial, sans-serif;
-}
+
+
+
 
