@@ -24,8 +24,12 @@ const dubai = new Location("Dubai", 11, 38, 3.7, []);
 const paris = new Location("Paris", 20, 37, 2.3, []);
 const lima = new Location("Lima", 2, 16, 4.6, []);
 
+
 const hours=['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 const stores=[seattle, tokyo, dubai, paris, lima];
+
+
+
 function random(min, max){
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -38,6 +42,12 @@ function estimateSale(store){
     }
     return sale;
 }
+
+seattle.estimate();
+tokyo.estimate();
+dubai.estimate();
+paris.estimate();
+lima.estimate();
 
 function render(store){
     const tr = document.createElement('tr');
@@ -55,6 +65,7 @@ function render(store){
     td.textContent = total;
     tr.appendChild(td);
     return tr;
+
 }
 
 function runSales(){
@@ -62,7 +73,7 @@ function runSales(){
     const table = document.createElement('table');
     const trHeader = document.createElement('tr');
     const thName = document.createElement('th');
-    thName.textContent = 'Tienda';
+    thName.textContent = 'Locations';
     trHeader.appendChild(thName);
     for(let i =0;i< hours.length;i++){
         const th = document.createElement('th');
@@ -70,7 +81,7 @@ function runSales(){
         trHeader.appendChild(th);
     }
     const thTotal = document.createElement('th');
-    thTotal.textContent = 'Totals';
+    thTotal.textContent = 'Location Totals';
     trHeader.appendChild(thTotal);
     table.appendChild(trHeader);
     for(let i =0;i< stores.length;i++){
@@ -78,7 +89,43 @@ function runSales(){
         const tr = render(stores[i]);
         table.appendChild(tr);
     }
-    root.appendChild(table);
+    if (root){
+        root.appendChild(table);
+    }
+
 }
 
 runSales();
+
+
+const data = [
+    ["Location", "Dirección", "Horario de Apertura","Información de contacto"],
+    ["Seatle", "2901 3rd Ave #300 Seattle, WA 98121","6am - 7pm", "123-456-7890"],
+    ["Tokyo", "1 Chome-1-2 Oshiage, Sumida City, Tokyo 131-8634", "6am - 7pm", "222-222-2222"],
+    ["Dubai","1 Sheikh Mohammed bin Rashid Blvd - Dubai","6am - 7pm", "333-333-3333"],
+    ["Paris","Champ de Mars, 5 Avenue Anatole France, 75007 Paris","6am - 7pm", "444-444-4444"],
+    ["Lima","Ca. Gral. Borgoño cuadra 8, Miraflores 15074","6am - 7pm", "555-555-5555"],
+];
+
+// Función para crear y agregar la tabla al contenedor
+function createTable(data) {
+    const tableContainer = document.getElementById('table-container');
+    const table = document.createElement('table');
+
+
+    data.forEach((row, rowIndex) => {
+        const tr = document.createElement('tr');
+        row.forEach((cell, cellIndex) => {
+            const cellElement = rowIndex === 0 ? document.createElement('th') : document.createElement('td');
+            cellElement.textContent = cell;
+            tr.appendChild(cellElement);
+        });
+        table.appendChild(tr);
+    });
+
+    tableContainer.appendChild(table);
+}
+
+
+createTable(data);
+
