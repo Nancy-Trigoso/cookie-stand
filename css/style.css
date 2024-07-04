@@ -139,3 +139,36 @@ table tr:nth-child(n+2):nth-child(-n+6) td:first-child {
     text-align: left; 
 }
 
+fieldset{
+    border: solid 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 1280px;
+    height: 60px; 
+    align-items: center;
+    margin-left: -25px; 
+}
+legend{
+    font-weight: bold;
+    color: #fa8072;
+    font-family: 'Times New Roman', Times, serif;
+}
+button{
+    border: none;
+    margin-top: 20px;
+    background-color:#d1d0d0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    
+}
+input{
+    max-width: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-size: 12px;
+    font-weight: bold;
+}

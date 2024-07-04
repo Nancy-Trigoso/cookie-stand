@@ -162,3 +162,23 @@ function run(){
   }
 }
 run();
+
+
+
+
+const newStoreForm = document.getElementById('newStore');
+
+newStoreForm.addEventListener('submit',
+    function (event){
+        event.preventDefault();
+        const locationName = event.target.locationName.value;
+        const minCustomersPerHour = parseInt(event.target.minCustomersPerHour.value);
+        const maxCustomersPerHour = parseInt(event.target.maxCustomersPerHour.value);
+        const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
+
+        const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
+        newLocation.estimate(this);
+        stores.push(newLocation);
+        
+    }
+);

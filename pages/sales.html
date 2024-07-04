@@ -22,8 +22,23 @@
             </nav>
     </header>
     <main class="tabla">
+        <section id="storeFormSection">
+            <form id="newStore" action="">
+                <fieldset>
+                    <legend>Add a new store to the table!!!</legend>
+                        <label for="locationName">Location Name</label>
+                        <input id="locationName" type="text" name="locationName" required>
+                        <label for="minCustomersPerHour">Minimum Customers Per Hour</label>
+                        <input id="minCustomersPerHour" type="number" required>
+                        <label for="maxCustomersPerHour">Maximum Customers Per Hour</label>
+                        <input id="maxCustomersPerHour" type="number" required>
+                        <label for="avgCookiesPerSale">Average Customers Per Sale</label>
+                        <input id="avgCookiesPerSale" type="number" required>
+                        <button type="submit">Click here to add!</button>
+                </fieldset>
+            </form>
+            </section>
         <section id="root"></section>
-        
     </main>
     <script src="../js/app.js"></script>
          
