@@ -58,7 +58,7 @@ header nav{
 }
 
 section{
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 section h2 {
@@ -126,7 +126,7 @@ table tr td:last-child {
     background-color: #808080; 
     font-weight: bold;
     text-align: center; 
-    color: white;
+    color:whitesmoke;
 }
 
 table tr:nth-child(n+2):nth-child(-n+6) td:nth-child(n+1):nth-child(-n+15) {
@@ -148,11 +148,12 @@ fieldset{
     height: 60px; 
     align-items: center;
     margin-left: -25px; 
+    margin-top: -20px;
 }
 legend{
     font-weight: bold;
-    color: #fa8072;
-    font-family: 'Times New Roman', Times, serif;
+    color: salmon;
+    font-family: "Righteous", sans-serif;
 }
 button{
     border: none;

@@ -36,6 +36,10 @@ Esta es una página web de desmotración conceptual que calcula el número de ga
 
 <img alt="puntaje2" src="/img/Lab07.PNG">
 
++ Punción de la fecha: 02-07-2024
+
+<img alt="puntaje2" src="/img/Lab09.PNG">
+
 ### Licencia 
 
 * MIT License

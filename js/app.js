@@ -164,6 +164,10 @@ function run(){
 run();
 
 
+function deleteTable(){
+  const runSales = document.getElementById("root");
+  runSales.textContent = "";
+}
 
 
 const newStoreForm = document.getElementById('newStore');
@@ -179,6 +183,7 @@ newStoreForm.addEventListener('submit',
         const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
         newLocation.estimate(this);
         stores.push(newLocation);
-        
+        deleteTable();
+        runSales();
     }
 );
