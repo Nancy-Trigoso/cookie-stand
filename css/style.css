@@ -43,6 +43,7 @@ header nav{
     display: block;
     margin-bottom: 40px; /* Ajusta según el espacio que desees debajo de la imagen */
     margin-top: 40px;
+
 }
 
 
@@ -55,38 +56,28 @@ header nav{
     
     
 }
+
 section{
     margin-top: 40px;
 }
 
-
-hr {
-    height: 1px;
-    background-color: black;
-}
-section.fill {
-    padding-top: 20px;
-    padding-bottom: 15px;
-    padding-left: 40px;
-}
-
-section.fill h2 {
+section h2 {
     font-family: "Righteous", sans-serif;
     font-style: bold;
-    color: black
+    font-size: 200%;
+    color: black;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    
 }
 
 p{
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 55px;
+    padding-left: 45px;
     color: gray;
 }
-section h2 {
-    font-family: "Righteous", sans-serif;
-    font-style: bold;
-    color: black;
-    padding-left: 30px;
-}
+
 
 footer{
     background-color:#bcbcbc;
@@ -122,7 +113,29 @@ td {
     font-weight: bold;
 }
 
+table tr:nth-child(1) {
+    background-color: #808080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+}
 
 
+table tr td:last-child {
+    background-color: #808080; 
+    font-weight: bold;
+    text-align: center; 
+    color: white;
+}
 
+table tr:nth-child(n+2):nth-child(-n+6) td:nth-child(n+1):nth-child(-n+15) {
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: salmon;
+}
+
+table tr:nth-child(n+2):nth-child(-n+6) td:first-child {
+    text-align: left; 
+}
 
