@@ -25,11 +25,11 @@ Location.prototype.estimate = function () {
   this.cookieEachHour = estimateSale(this);
 };
 
-const seattle = new Location('Seattle', 23, 65, 6.3, [], '2901 3rd avenue #300, Seattle', '123-456-789', '6 a.m.-7 p.m.');
-const tokyo = new Location('Tokyo', 3, 24, 1.2, [], '1 Chome 1-2 Oshiage, Sumida City, Tokyo 121-8634', '222-222-2222', '6 a.m.-7 p.m.');
-const dubai = new Location('Dubai', 11, 38, 3.7, [], '1 Sheikh Mohammed bin Rashid Blvd - Dubai', '333-333-3333', '6 a.m.-7 p.m.');
-const paris = new Location('Paris', 20, 38, 2.3, [], 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris', '444-444-4444', '6 a.m.-7 p.m.');
-const lima = new Location('Lima', 2, 16, 4.6, [], 'Ca.Gral. Borgoño cuadra 8, Miraflores 15074', '555-555-5555', '6 a.m.-7 p.m.');
+const seattle = new Location('Seattle', 23, 65, 6.3, [], '2901 3rd avenue #300, Seattle, WA 98121', '123-456-789', '6am - 7 pm');
+const tokyo = new Location('Tokyo', 3, 24, 1.2, [], '1 Chome 1-2 Oshiage, Sumida City, Tokyo 131-8634', '222-222-2222', '6am - 7pm');
+const dubai = new Location('Dubai', 11, 38, 3.7, [], '1 Sheikh Mohammed bin Rashid Blvd - Dubai', '333-333-3333', '6am - 7 pm');
+const paris = new Location('Paris', 20, 38, 2.3, [], 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris', '444-444-4444', '6am - 7 pm');
+const lima = new Location('Lima', 2, 16, 4.6, [], 'Ca.Gral. Borgoño cuadra 8, Miraflores 15074', '555-555-5555', '6am - 7 pm');
 
 const stores=[seattle,tokyo,dubai,paris, lima];
 
@@ -98,7 +98,7 @@ function runSales(){
   const table = document.createElement('table');
   const trHeader = document.createElement('tr');
   const thName =document.createElement('th');
-  thName.textContent = 'Location';
+  thName.textContent = 'Locations';
   trHeader.appendChild(thName);
   for(let i=0;i<hours.length;i++){
     const th = document.createElement('th');
@@ -163,13 +163,6 @@ function run(){
 }
 run();
 
-
-function deleteTable(){
-  const runSales = document.getElementById("root");
-  runSales.textContent = "";
-}
-
-
 const newStoreForm = document.getElementById('newStore');
 
 newStoreForm.addEventListener('submit',
@@ -183,7 +176,8 @@ newStoreForm.addEventListener('submit',
         const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
         newLocation.estimate(this);
         stores.push(newLocation);
-        deleteTable();
+        
         runSales();
     }
 );
+
