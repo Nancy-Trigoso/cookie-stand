@@ -75,21 +75,21 @@ function render(store){
 function renderIndex(store){
 
   const fill=document.getElementById('fill');
-  const locationn=document.createElement('section');
-  locationn.classList.add('location');
-  fill.appendChild(locationn);
+  const location=document.createElement('section');
+  location.classList.add('location');
+  fill.appendChild(location);
   const title=document.createElement('h2');
   title.textContent=store.locationName;
-  locationn.appendChild(title);
+  location.appendChild(title);
   const workInfo=document.createElement('p');
   workInfo.textContent= `Hours Open: ${store.hoursopen}`;
-  locationn.appendChild(workInfo);
+  location.appendChild(workInfo);
   const telfInfo=document.createElement('p');
   telfInfo.textContent= `Contact Info: ${store.contactinfo}`;
-  locationn.appendChild(telfInfo);
+  location.appendChild(telfInfo);
   const addressInfo=document.createElement('p');
   addressInfo.textContent= `Location: ${store.address}`;
-  locationn.appendChild(addressInfo);
+  location.appendChild(addressInfo);
 
 }
 
@@ -121,6 +121,7 @@ function runSales(){
     root.appendChild(table);
   }
   renderTotales();
+  
 }
 runSales();
 
@@ -161,7 +162,12 @@ function run(){
     renderIndex(stores[i]);
   }
 }
-run();
+
+
+function deleteTable(){
+  const salesTable = document.getElementById("root");
+  salesTable.textContent = "";
+}
 
 const newStoreForm = document.getElementById('newStore');
 
@@ -176,8 +182,7 @@ newStoreForm.addEventListener('submit',
         const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
         newLocation.estimate(this);
         stores.push(newLocation);
-        
+        deleteTable();
         runSales();
     }
 );
-
