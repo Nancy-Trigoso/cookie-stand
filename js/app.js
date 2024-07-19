@@ -15,7 +15,7 @@ function Location(locationName,
   this.minClientPerHour = minClientPerHour;
   this.maxClientPerHour = maxClientPerHour;
   this.agvCookiePerSale = agvCookiePerSale;
-  this.cookieEachHour = cookieEachHour;
+  this.cookieEachHour = cookieEachHour[];
   this.address = address;
   this.contactinfo = contactinfo;
   this.hoursopen = hoursopen;
