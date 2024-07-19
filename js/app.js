@@ -180,7 +180,7 @@ newStoreForm.addEventListener('submit',
         const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
 
         const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
-        newLocation.estimate(this);
+        newLocation.estimate();
         stores.push(newLocation);
         deleteTable();
         runSales();
