@@ -15,7 +15,7 @@ function Location(locationName,
   this.minClientPerHour = minClientPerHour;
   this.maxClientPerHour = maxClientPerHour;
   this.agvCookiePerSale = agvCookiePerSale;
-  this.cookieEachHour = cookieEachHour[];
+  this.cookieEachHour = cookieEachHour;
   this.address = address;
   this.contactinfo = contactinfo;
   this.hoursopen = hoursopen;
@@ -169,18 +169,18 @@ function deleteTable(){
   salesTable.textContent = "";
 }
 
-const newStoreForm = document.getElementById('newStore');
+const newStoreForm = document.getElementById(`newStore`);
 
-newStoreForm.addEventListener('submit',
+newStoreForm.addEventListener(`submit`,
     function (event){
         event.preventDefault();
         const locationName = event.target.locationName.value;
-        const minCustomersPerHour = parseInt(event.target.minCustomersPerHour.value);
-        const maxCustomersPerHour = parseInt(event.target.maxCustomersPerHour.value);
+        const minClientPerHour = parseInt(event.target.minClientPerHour.value);
+        const maxClientPerHour = parseInt(event.target.maxClientPerHour.value);
         const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
 
-        const newLocation = new Location(locationName, '', '', '', [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
-        newLocation.estimate();
+        const newLocation = new Location(locationName, '', '', '', [],  minClientPerHour, maxClientPerHour, agvCookiePerSale)
+        newLocation.estimate(this);
         stores.push(newLocation);
         deleteTable();
         runSales();
