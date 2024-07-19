@@ -169,17 +169,17 @@ function deleteTable(){
   salesTable.textContent = "";
 }
 
-const newStoreForm = document.getElementById(`newStore`);
+const newStoreForm = document.getElementById('newStore');
 
-newStoreForm.addEventListener(`submit`,
+newStoreForm.addEventListener('submit',
     function (event){
         event.preventDefault();
         const locationName = event.target.locationName.value;
         const minClientPerHour = parseInt(event.target.minClientPerHour.value);
         const maxClientPerHour = parseInt(event.target.maxClientPerHour.value);
-        const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
+        const avgCookiePerSale = parseInt(event.target.avgCookiePerSale.value);
 
-        const newLocation = new Location(locationName, '', '', '', [],  minClientPerHour, maxClientPerHour, agvCookiePerSale)
+        const newLocation = new Location(name, '', '', '', [],  minClientPerHour, maxClientPerHour, agvCookiePerSale)
         newLocation.estimate(this);
         stores.push(newLocation);
         deleteTable();
